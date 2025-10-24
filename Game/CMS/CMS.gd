@@ -29,3 +29,14 @@ static func get_scenes_in_directory(path : String) -> Array[String]:
 		if i.ends_with(".tscn"):
 			file_paths.append(path + i)
 	return file_paths
+
+
+## method to create and add an entity to node
+static func create_entity(add_to: Node, entity_scene : PackedScene, path_to_entity : String = ""):
+	var entity : Entity
+	if entity_scene != null:
+		entity = entity_scene.instantiate()
+	else:
+		entity = load_resource(path_to_entity).instantiate()
+	add_to.add_child(entity)
+	entity.Initialize(add_to)

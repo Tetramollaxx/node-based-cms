@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cysvnyeb1ov73"]
+
+[ext_resource type="Script" uid="uid://chj1iuuawc7ab" path="res://Game/CMS/Entity.gd" id="1_62day"]
+[ext_resource type="Script" uid="uid://b87aet2qtiytf" path="res://Game/CMS/Demo/DemoTags/TagRollValueOnPlay.gd" id="2_084bs"]
+
+[node name="DefaultDiceEntity" type="Node"]
+script = ExtResource("1_62day")
+metadata/_custom_type_script = "uid://chj1iuuawc7ab"
+
+[node name="TagRollValueOnPlay" type="Node" parent="."]
+script = ExtResource("2_084bs")
+metadata/_custom_type_script = "uid://b87aet2qtiytf"
