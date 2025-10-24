@@ -1,4 +1,5 @@
 extends Node
+## Entity, saved as scene, and loaded by its owner, has tags
 class_name Entity
 
 
@@ -6,6 +7,7 @@ var Tags : Array[Tag]
 var node : Node
 
 
+## Every entity's owner(for example card or item or weapon) MUST initialize it...
 func Initialize(node_to_bind : Node):
 	node = node_to_bind
 
@@ -13,6 +15,8 @@ func Initialize(node_to_bind : Node):
 	node.tree_exiting.connect(_on_node_exiting_tree)
 
 	for t in get_children():
+		Tags.append(t)
+		t.add_to_group("Interaction")
 		t.node = node_to_bind
 		t.entity = self
 		t.OnInit()

@@ -7,7 +7,7 @@ var node: Node
 ## reference to entity
 var entity: Entity
 
-@warning_ignore("unused_parameter")
+# virtual
 func OnInit(): pass
 func OnNodeReady(): pass
 func OnNodeExitingTree(): pass
