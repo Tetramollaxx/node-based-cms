@@ -15,6 +15,10 @@ func get_implementers(method_name: String) -> Array:
 ## For example: Interactions.call_implementers("OnBattleStart", turn_number)
 ##
 ## Would automatically invoke OnBattleStart(turn_number) on all nodes that have it and have group "Interaction"
-func call_implementers(method_name: String, ...args: Array[Variant]):
+func call_all(method_name: String, ...args: Array[Variant]):
 	for i in get_implementers(method_name):
 		i.callv(method_name, args)
+
+func call_async(method_name: String, ...args: Array[Variant]):
+	for i in get_implementers(method_name):
+		await i.callv(method_name, args)

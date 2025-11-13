@@ -3,9 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://dhnutxl1ht58h" path="res://Game/CMS/Demo/dice.tscn" id="1_3120m"]
 [ext_resource type="Script" uid="uid://b4i6ot8s2k3st" path="res://Game/CMS/Demo/demo_main.gd" id="1_jf3qi"]
 
-[node name="DemoMain" type="Node2D"]
+[node name="DemoMain" type="Node2D" unique_id=729329938]
 script = ExtResource("1_jf3qi")
 
-[node name="Dice" parent="." instance=ExtResource("1_3120m")]
+[node name="Dice" parent="." unique_id=1029921813 instance=ExtResource("1_3120m")]
 unique_name_in_owner = true
-position = Vector2(535, 308)
+position = Vector2(179, 308)
+
+[node name="Dice2" parent="." unique_id=1081329687 instance=ExtResource("1_3120m")]
+unique_name_in_owner = true
+position = Vector2(357, 308)
+
+[node name="Dice3" parent="." unique_id=313283848 instance=ExtResource("1_3120m")]
+unique_name_in_owner = true
+position = Vector2(532, 308)
+
+[node name="Dice4" parent="." unique_id=72816113 instance=ExtResource("1_3120m")]
+unique_name_in_owner = true
+position = Vector2(686, 308)
+
+[node name="Dice5" parent="." unique_id=1898555672 instance=ExtResource("1_3120m")]
+unique_name_in_owner = true
+position = Vector2(865, 308)

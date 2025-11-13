@@ -6,7 +6,7 @@ class_name TagRollValueOnPlay
 @export var RolledValue : int = -1
 
 
-func OnPlayedDice(dice : Dice):
-	if dice == node:
-		RolledValue = PossibleValues.pick_random()
-		dice.value_label.text = str(RolledValue)
+func OnPlayedDice():
+	RolledValue = PossibleValues.pick_random()
+	await node.VFXJump()
+	node.value_label.text = str(RolledValue)
